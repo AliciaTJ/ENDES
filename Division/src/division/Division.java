@@ -15,7 +15,7 @@ public class Division {
      * @param args the command line arguments
      */
     
-    public int division (int numerador, int denominador){
+    public static int division (int numerador, int denominador){
        try{
         return (numerador/denominador);
        }catch (Exception e){
@@ -24,7 +24,7 @@ public class Division {
        return 0;
     }
     public static void main(String[] args) {
-        // TODO code application logic here
+       System.out.println ("Resultado de la operacion: "+ division(6,3));
         
         
         
