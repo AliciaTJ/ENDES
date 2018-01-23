@@ -38,19 +38,18 @@ public class DivisionTest {
     }
 
     /**
-     * Test of dicision method, of class Division.
+     * Test of division method, of class Division.
      */
     @Test
-    public void testDicision() {
-        System.out.println("dicision");
+    public void testDivision() {
+        System.out.println("division");
         int numerador = 0;
         int denominador = 0;
-        Division instance = new Division();
         int expResult = 0;
-        int result = instance.division(numerador, denominador);
+        int result = Division.division(numerador, denominador);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -62,7 +61,7 @@ public class DivisionTest {
         String[] args = null;
         Division.main(args);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
     
 }
