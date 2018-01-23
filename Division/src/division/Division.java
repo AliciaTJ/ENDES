@@ -15,8 +15,13 @@ public class Division {
      * @param args the command line arguments
      */
     
-    public int dicision (int numerador, int denominador){
-        return 
+    public int division (int numerador, int denominador){
+       try{
+        return (numerador/denominador);
+       }catch (Exception e){
+           System.out.println("Se ha producido un error: " + e.getMessage ());
+       }
+       return 0;
     }
     public static void main(String[] args) {
         // TODO code application logic here
