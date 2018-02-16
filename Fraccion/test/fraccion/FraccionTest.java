@@ -25,8 +25,8 @@ public class FraccionTest {
     public static void creaFraccion(){
        a=new Fraccion (2,5);
          b=new Fraccion (-5,-2);
-         c=new Fraccion (18,6);
-         d=new Fraccion (8,0);
+         c=new Fraccion (10,9);
+         d=new Fraccion (8,1);
     }
     
     
@@ -65,7 +65,7 @@ public class FraccionTest {
     @Test
     public void testMultiplicar() {
         System.out.println("multiplicar");
-        Fraccion expResult=new Fraccion (36,30);
+        Fraccion expResult=new Fraccion (20,45);
         Fraccion result = Fraccion.multiplicar(a, c);
         assertEquals(expResult.aString(), result.aString());
      
@@ -92,7 +92,7 @@ public class FraccionTest {
     @Test
     public void testDividir() {
         System.out.println("dividir");
-        Fraccion expResult = new Fraccion (0,5);
+        Fraccion expResult = new Fraccion (2,40);
         Fraccion result = Fraccion.dividir(a, d);
         assertEquals(expResult.aString(), result.aString());
       
@@ -120,10 +120,17 @@ public class FraccionTest {
     public void testSimplificar() {
         System.out.println("simplificar");
        
-        Fraccion expResult = new Fraccion (1,0);
+        Fraccion expResult = new Fraccion (8,1);
        String result = d.simplificar().aString();
         assertEquals(expResult.aString(), result);
       
     }
+    
+    
+       @Test (expected = java.lang.ArithmeticException.class)
+    public void crearDenCero() throws ArithmeticException {
+    Fraccion cero=new Fraccion(5,0);
+    }
+       
     
 }

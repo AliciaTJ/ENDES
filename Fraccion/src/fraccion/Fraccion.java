@@ -30,7 +30,14 @@ public class Fraccion  {
   //Constructor general
   public Fraccion(int x, int y) {
      num=x;
+     if (y==0)
+        throw new ArithmeticException ("El denominador no puede ser cero");
+     
      den=y;
+    
+    
+     
+     
   }
   
 
@@ -168,5 +175,9 @@ public class Fraccion  {
      den/=dividir;
      return this;
   }
+
+    private Exception ArithmeticException(String el_denominador_no_puede_ser_cero) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
