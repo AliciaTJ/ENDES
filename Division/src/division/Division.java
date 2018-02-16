@@ -16,17 +16,15 @@ public class Division {
      */
     
     public static int division (int numerador, int denominador){
-       try{
         return (numerador/denominador);
-       }catch (Exception e){
-           System.out.println("Se ha producido un error: " + e.getMessage ());
-       }
-       return 0;
     }
     public static void main(String[] args) {
-       System.out.println ("Resultado de la operacion: "+ division(6,3));
-        
-        
+        // TODO code application logic here
+       try{
+        System.out.println("Resultado de la operacion: " + division(2,0));
+       }catch (Exception e){
+           System.out.println("ERROR");
+       }
         
     }
     
