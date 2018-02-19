@@ -42,7 +42,7 @@ public class ParamTest {
  */
 
   @Parameterized.Parameters
-   public static Collection<Fraccion[]> byneris() throws Exception{
+   public static Collection<Fraccion[]> suma() throws Exception{
        return Arrays.asList (new Fraccion[][] {{new Fraccion(8,9),new Fraccion (3,8), new Fraccion (91,72)}
       , {new Fraccion(8,3),new Fraccion (-2,-3), new Fraccion (-30,-9)}}); 
    }

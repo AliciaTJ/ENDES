@@ -7,6 +7,7 @@ package fraccion;
 
 
 
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -30,7 +31,13 @@ public class FraccionTest {
     }
     
     
-
+    @AfterClass
+    public static void cierraFraccion(){
+        a=null;
+        b=null;
+        c=null;
+        d=null;
+    }
 
     /**
      * Test of sumar method, of class Fraccion.
@@ -98,7 +105,6 @@ public class FraccionTest {
       
     }
 
- 
 
     /**
      * Test of aString method, of class Fraccion.

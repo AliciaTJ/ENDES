@@ -40,7 +40,7 @@ public class ParamInversa {
  */
 
   @Parameterized.Parameters
-   public static Collection<Fraccion[]> byneris(){
+   public static Collection<Fraccion[]> inversa(){
     
        return Arrays.asList (new Fraccion[][] {{new Fraccion(8,9), new Fraccion (9,8)}
       , {new Fraccion(-8,-3), new Fraccion (-3,-8)}
@@ -55,7 +55,7 @@ public class ParamInversa {
      */
     @Test
     public void testInversa()  {
-        System.out.println("Invesa");
+        System.out.println("Inversa");
         Fraccion result = Fraccion.inversa(fraccion1);
         assertEquals(resul.aString(), result.aString());
     }

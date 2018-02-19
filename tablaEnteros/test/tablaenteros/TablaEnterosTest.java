@@ -5,8 +5,8 @@
  */
 package tablaenteros;
 
-import org.junit.After;
-import org.junit.Before;
+
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -30,23 +30,29 @@ public class TablaEnterosTest {
     
     }
     
-    @Before
-    public void setUp() {
-   
-    }
-    
-    @After
-    public void tearDown() {
+    @AfterClass
+    public static void cierra(){
+        lista=null;
+        lista2=null;
     }
 
     /**
-     * Test of sumaTabla method, of class TablaEnteros.
+     * Test of Null pointer exception
      */
     @Test(expected =  java.lang.NullPointerException.class)
     public void testSumaTabla() {
-        System.out.println("sumaTabla");
+        System.out.println("NullPointerException");
         int result=lista2.sumaTabla();
         
+    }
+    /**
+     * Test of sumaTabla
+     */
+      @Test
+    public void testSumaTabla2() {
+        System.out.println("sumaTabla");
+        int result=lista.sumaTabla();
+         assertEquals(12, result);
     }
 
     /**
@@ -67,10 +73,17 @@ public class TablaEnterosTest {
      */
     @Test (expected =  java.util.NoSuchElementException.class)
     public void testPosicionTabla() {
-        System.out.println("posicionTabla");
+        System.out.println("NoSuchElementException");
         int result = lista.posicionTabla(96);
        
 
+    }
+    
+        @Test
+    public void testPosicionTabla2() {
+        System.out.println("posicionTabla");
+        int result = lista.posicionTabla(3);
+         assertEquals(4, result);
     }
     
 }

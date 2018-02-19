@@ -42,7 +42,7 @@ public class ParamMulti {
  */
 
   @Parameterized.Parameters
-   public static Collection<Fraccion[]> byneris(){
+   public static Collection<Fraccion[]> multi(){
        return Arrays.asList (new Fraccion[][] {{new Fraccion(8,9),new Fraccion (3,8), new Fraccion (24,72)}
       , {new Fraccion(8,3),new Fraccion (-2,-3), new Fraccion (-16,-9)}
        ,{new Fraccion(0,3),new Fraccion (-2,9), new Fraccion (0,27)}}); 
